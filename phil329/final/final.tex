@@ -6,14 +6,23 @@
 \usepackage{setspace}
 \usepackage [english]{babel}
 \usepackage [autostyle, english = american]{csquotes}
+\usepackage{indentfirst}
 \MakeOuterQuote{"}
 
-\setlength{\parindent}{0em}
-\setlength{\parskip}{1em}
+\usepackage{etoolbox}
+\AtBeginEnvironment{quote}{\singlespacing\small}
+
 
 \title{Evaluating the Responsibility of the Programmer for His AI}
 \author{Joseph A. Boyle}
 \date{December 20, 2017}
+
+\makeatletter
+\pretocmd{\@sect}{\singlespacing}{}{}
+\pretocmd{\@ssect}{\singlespacing}{}{}
+\apptocmd{\@sect}{\doublespacing}{}{}
+\apptocmd{\@ssect}{\doublespacing}{}{}
+\makeatother
 
 \begin{document}
 
@@ -23,19 +32,32 @@
 Sine the days of Alan Turing\cite{turing_test}, the question of whether or not machines can truly think has troubled even the brightest computer scientists, philosophers, and cognitive scientists. Moreover, the consequences of that question carry heavy consequences which have made the discussion space difficult to prove one way or another. If a robot commits a war crime, does its ability to think and rationally decide to commit that crime leave it liable? If so, does the lack of a real thought process delegate responsibility elsewhere? If the penalty of a crime is death, and the robot isn't ultimately responsible, does its creator gain the death penalty?
 
 \section{Classes of Robots}
-For the purposes of our discussion, the definition of a "bot" is important. 
-	
-	\subsection{Non-Mobile Bots}
-		"Non mobile" bots are the types of AI that have been developed for the predominant duration of AI research. These types of bots include chatbots, infobots, weather-predicting bots, and news bots. Bots of this class typically run 
-	
-	\subsection{Mobile "Real Life" Bots}
+	For the purposes of our discussion, the definition of a "bot" is important. 
 
-	\subsection{Bots capable of Reproducing}
+	\textit{Non mobile bots} are the types of AI that have been developed for the predominant duration of AI research. These types of bots include chatbots, infobots, weather-predicting bots, and news bots. Typically, non-mobile bots are viewed as computer programs rather than a conventional bot. 
+	
+	\textit{Mobile Bots} refer to the conventional notion of a "real life" bot that can move around, and generally look like \textit{Sophia}, Data from \textit{Star Trek}, or \textit{Wall-E}. 
+	
+	Finally, we use the term \textit{Reproductive bots} to refer to the class of robots which either can directly produce off-spring (either via "birth" or cloning) or can modify their own code or hardware without human assistance
+
+\section{Delegating Blame}
+	
+	To this point, we have considered circumstances in which robots, given choices A and B, incorrectly choose to do A due to either a logical mistake or malicious intent on behalf of the developer. What we have not considered, however, is when robots make mistakes simply due to a lack of information.			
+		
+	\begin{quote}
+		He brings up an image of an airplane on a runway and tells me that when he presses a key some major feature will disappear. I am to tell him what it is. Koch jabs at the keyboard and the image flashes momentarily, but as far as I can tell everything remains the same. He does it again, several times, but still I see nothing different. Finally Koch tells me it is the aircraft’s fuselage that disappears. Once it’s pointed out, the omission becomes glaringly evident.\cite{zombie_within}
+	\end{quote}
+		
+	Intentional Wrongdoing.		
+
+	Reproductive Faults
 
 \section{Consequences}
 	In the same way that most doctors would likely not lobby in favour of harsher punishments for mistakes, it is scary as a programmer to recommend programmers be held responsible for the use of their inventions. There are a number of consequences that should be considered with this view, and perhaps even circumstances where we hold programmers to be not responsible for what has happened with their inventions. That is, in the same way that doctors are held responsible for mistakes in a subset of cases, programmers should not be held liable in all situations.
 	
+	Hacked robots doing against what we want
 	
+	More generally, robots being used not for what we intended.	
 
 \section{Conclusion}
 
@@ -45,6 +67,9 @@ For the purposes of our discussion, the definition of a "bot" is important.
 
 \bibitem{turing_test}
 https://content.sakai.rutgers.edu/access/content/group/ffe89ccf-3ee0-4996-8775-5ac9e5fff069/Assigned\%20Readings/Turing\%20Computing\%20Machinery\%20and\%20Intelligence-1.pdf
+
+\bibitem{zombie_within}
+https://content.sakai.rutgers.edu/access/content/group/ffe89ccf-3ee0-4996-8775-5ac9e5fff069/Assigned\%20Readings/Koch\%20The\%20Zombie\%20Within.pdf
 
 \end{thebibliography}
 
