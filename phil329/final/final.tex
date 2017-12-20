@@ -9,9 +9,17 @@
 \usepackage{indentfirst}
 \MakeOuterQuote{"}
 
+\usepackage[
+backend=bibtex,
+style=numeric,
+sorting=none
+]{biblatex}
+
+
+\addbibresource{bibliography.bib}
+
 \usepackage{etoolbox}
 \AtBeginEnvironment{quote}{\singlespacing\small}
-
 
 \title{Evaluating the Responsibility of the Programmer for His AI}
 \author{Joseph A. Boyle}
@@ -40,61 +48,49 @@ Since the days of Alan Turing\cite{turing_test}, the question of whether or not 
 	
 	Finally, we use the term \textit{Reproductive bots} to refer to the class of robots which either can directly produce off-spring (either via "birth" or cloning) or can modify their own code or hardware without human assistance
 
-\section{Robots Without Intentionality}
-	It is useful to split our discussion into two pieces: robots that have intentionality, and robots that do not. Intentionality, generally, refers to the idea of an entity "[being] about \textit{something}"\cite{intentionality}. That is, an intentional agent has thoughts or beliefs about ideas or actions, rather than just being a mindless entity that does as is. Imagine a \textit{non mobile bot} which decides what content to send its users. This bot, however, has been intentionally programmed to have a skew towards sending articles in favor of overthrowing the government. Over time, it influences public opinion and eventually causes havoc in society. Perhaps another bot gives stock advice to investors, and was programmed to intentionally give advice that will bankrupt the investor in favor of bringing wealth to the developer.
-	
-	Pretty clearly, these bots are following a program. Searle argues:
-	
-	\begin{quote}
-		Why does the man in the Chinese room not understand Chinese even though he can pass the Turing test for understanding Chinese? The answer is that he has only the formal syntax of the program and not the actual mental content or semantic content that is associated with the words of a language when a speaker understands that language\cite{chinese_room_1, chinese_room_2}.
-	\end{quote}
-	
-	Thus, the bot is doing the equivalent of a human wearing a blindfold and handing out whatever papers are at the top of the stack of papers. It has no thought process of what papers it hands out -- it just gives one to each passer-by in a rote-manner. If a malicious attacker were to replace all of the papers in the stack with pro-coup pamphlets, and the person handing out the papers continued following its program without any mental state, it's reasonable to conclude that the fault doesn't lie with the person handing out the papers. Similarly, if a robot is just a blind machine following a program as Searle says, we cannot reasonably attribute blame the robot. 
-	
-	Can the same be said about robots which aren't as cut and dry as being developed by a programmer with malicious intent? Take, for instance, the AI that Facebook uses to serve targeted ads to its viewers. In the 2016 Presidential Election, this algorithm has been criticized as disproportionally showing Russian propaganda\cite{facebook_russia} in comparison with valid ads, therein potentially swaying the results of the election. Thus far, we have yet to find that a particular individual or even company has purposely caused this error, but we still seek to place the blame for the malfunction somewhere. Following Searle's point of view.
-	
-	We must truly consider the question of whether or not lacking intentionality is a justifiable reason to not be blamed for a malfunction. Previously, we asserted that an individual handing out destructive papers is okay if they have no way of knowing what they are doing, but I believe that requires a second contingency: that the entity also has no way to correct it. That is, it is only when an entity has no way of understanding what they are doing and also has no mechanism to deviate from that task, that they can be held liable. Given a robot that can't alter its own code or affect future generations of itself via its own free will, it seems clear that robots without intentionality don't fall into this group of agents who could receive blame for crimes.
+\section{Assessing Faults for Harm Caused by Robots}
+	It is useful to split our discussion into two pieces: robots that have intentionality, and robots that do not. Intentionality, generally, refers to the idea of an entity "[being] about \textit{something}"\cite{intentionality}. That is, an intentional agent has thoughts or beliefs about ideas or actions, rather than just being a mindless entity that does as is. 
 
-\section{Robots With Intentionality}
+	\subsection{Robots Without Intentionality}
+		Imagine a \textit{non mobile bot} which decides what content to send its users. This bot, however, has been intentionally programmed to have a skew towards sending articles in favor of overthrowing the government. Over time, it influences public opinion and eventually causes havoc in society. Perhaps another bot gives stock advice to investors, and was programmed to intentionally give advice that will bankrupt the investor in favor of bringing wealth to the developer. According to Searle\cite{chineseroom1, chineseroom2},
 	
-	To this point, we have considered circumstances in which robots, given choices A and B, incorrectly choose to do A due to either a logical mistake or malicious intent on behalf of the developer. What we have not considered, however, is when robots make mistakes simply due to a lack of information.			
-		
-	\begin{quote}
-		He brings up an image of an airplane on a runway and tells me that when he presses a key some major feature will disappear. I am to tell him what it is. Koch jabs at the keyboard and the image flashes momentarily, but as far as I can tell everything remains the same. He does it again, several times, but still I see nothing different. Finally Koch tells me it is the aircraft’s fuselage that disappears. Once it’s pointed out, the omission becomes glaringly evident.\cite{zombie_within}
-	\end{quote}
-		
-	Intentional Wrongdoing.		
+		\begin{quote}
+			Why does the man in the Chinese room not understand Chinese even though he can pass the Turing test for understanding Chinese? The answer is that he has only the formal syntax of the program and not the actual mental content or semantic content that is associated with the words of a language when a speaker understands that language.
+		\end{quote}
+	
+		Thus, the bot is doing the equivalent of a human wearing a blindfold and handing out whatever papers are at the top of the stack of papers. It has no thought process of what papers it hands out -- it just gives one to each passer-by in a rote-manner. If a malicious attacker were to replace all of the papers in the stack with pro-coup pamphlets, and the person handing out the papers continued following its program without any mental state, it's reasonable to conclude that the fault doesn't lie with the person handing out the papers. Similarly, if a robot is just a blind machine following a program as Searle says, we cannot reasonably attribute blame the robot. 
+	
+		Can the same be said about robots which aren't as cut and dry as being developed by a programmer with malicious intent? Take, for instance, the AI that Facebook uses to serve targeted ads to its viewers. In the 2016 Presidential Election, this algorithm has been criticized as disproportionally showing Russian propaganda\cite{facebook_russia} in comparison with valid ads, therein potentially swaying the results of the election. Thus far, we have yet to find that a particular individual or even company has purposely caused this error, but we still seek to place the blame for the malfunction somewhere.
+	
+		We must truly consider the question of whether or not lacking intentionality is a justifiable reason to not be blamed for a malfunction. Previously, we asserted that an individual handing out destructive papers is okay if they have no way of knowing what they are doing, but I believe that requires a second contingency: that the entity also has no way to correct it. That is, it is only when an entity has no way of understanding what they are doing and also has no mechanism to deviate from that task, that they can be held liable. Given a robot that can't alter its own code or affect future generations of itself via its own free will, it seems clear that robots without intentionality don't fall into this group of agents who could receive blame for crimes.
+	
+		Without giving our mindless man handing out papers any intentionality, we give to him some added instructions: scanning each page and detecting if it contains any "Destruction" symbols (a process which is quite complicated, but for the sake of discussion we assume is simple). If a "Destruction" symbol appears on the paper, he is to not hand it out to anybody, whereas if it doesn't, he can hand the pamphlet out. There are two major ways in which this protocol could fail: the paper could have a negative symbol that we simply aren't searching for, or it could have one and we just miss it. Responsibility for mistakes in the system of the first type are very clearly not within the system's control, and therein must fall back to the developer. Responsibility for mistakes of the second type are much more difficult to assign, though. While the majority of the article exploring what it means to be conscious, Wertheim gives a pretty good account of what it means to be \textit{cognizant}\cite{zombie_within}:
 
-	Reproductive Faults
+		\begin{quote}
+			He brings up an image of an airplane on a runway and tells me that when he presses a key some major feature will disappear. I am to tell him what it is. Koch jabs at the keyboard and the image flashes momentarily, but as far as I can tell everything remains the same. He does it again, several times, but still I see nothing different. Finally Koch tells me it is the aircraft’s fuselage that disappears. Once it’s pointed out, the omission becomes glaringly evident.
+		\end{quote}
+		
+		For a computer system, being cognizant generally requires the system to know what it is looking at. There are numerous classifiers to detect birds, planes, buildings, and other general objects, but it is incredibly hard for a system to infer what type an object is without having ever been given the association before. This is equivalent to giving a human the task of identifying a species of bird from a picture when they had never before heard of a bird. Wertheim makes a strong point in his article that generally 
+
+	\subsection{Robots With Intentionality}
+		If intentionality requires the ability to 
+	
+		To this point, we have considered circumstances in which robots, given choices A and B, incorrectly choose to do A due to either a logical mistake or malicious intent on behalf of the developer. What we have not considered, however, is when robots make mistakes simply due to a lack of information.			
+		
+		Intentional Wrongdoing.		
+
+		Reproductive Faults
 
 \section{Abused Robots Causing Harm}	
 	Imagine a combat robot that is developed to only follow orders from a specific individual, resisting what it views as immoral orders. This works well and is able to only do the right thing. If that bot is now "hacked" into and made to ignore its moral compass and instead kill anybody in sight, can we assign blame to the original developer? On a surface glance, this answer seems trivial -- no, it's the hacker's fault. What if we find out that the developer introduced bugs into the source code of the robot which made is susceptible to hacking? Perhaps it's reasonable, then, to conclude that the developer is at fault. Consider, then, that the vulnerability is not from a bug that the developer introduced, but rather from the hacker finding a way to crack the underlying encryption technique that the developer used, which was created by yet another developer? 
 	
-	It is in the nature of software development that behavior is abstracted away and built on top of. If we were to suddenly find an error in one of the lower layers and therein cause a robot built on top of those layers to exhibit errors, can we truly fault the developers of those bottom layers if they never knew that their work would be used in such a manor? 
-	
-	More generally, robots being used not for what we intended.	
+	It is in the nature of software development that behavior is abstracted away and built on top of. If we were to suddenly find an error in one of the lower layers and therein cause a robot built on top of those layers to exhibit errors, can we truly fault the developers of those bottom layers if they never knew that their work would be used in such a manor? This seems equivalent to the problem of a cell phone being used in a phone-activated, roadside bomb -- do we hold the cell phone manufacturer responsible? It is a slippery slope to assume a creator can foresee every possible usage of their invention. Rather, we must examine scenarios in which the developer either acted in malice or knew of fatal flaws and persevered anyway. 
 
 \section{Conclusion}
+One of the primary reasons that it is difficult to reason about who is to blame when something goes wrong in a philosophical sense, is due to the large implication that that decision carries. Inventing something that goes beyond the "hunk of metal" realm and into the "entity" realm carries with it a weight that is difficult to dismiss when things go wrong. Much in the way that our parents are responsible for many of our actions until we reach the legal age of the majority -- an age at which it is decided humans are "responsible", "conscious", and "moral" -- it is reasonable to assume that the creator of an AI has a number of responsibilities over it. What we have explored in this paper is a set of scenarios that could occur, each of which carries varying degrees of blame for the creator and creation, that we will likely have to deal with in the coming years.
 
 \newpage
 
-\begin{thebibliography}{6}
-
-\bibitem{turing_test}
-https://content.sakai.rutgers.edu/access/content/group/ffe89ccf-3ee0-4996-8775-5ac9e5fff069/Assigned\%20Readings/Turing\%20Computing\%20Machinery\%20and\%20Intelligence-1.pdf
-
-\bibitem{zombie_within}
-https://content.sakai.rutgers.edu/access/content/group/ffe89ccf-3ee0-4996-8775-5ac9e5fff069/Assigned\%20Readings/Koch\%20The\%20Zombie\%20Within.pdf
-
-\bibitem{chinese_room_1}
-https://content.sakai.rutgers.edu/access/content/group/ffe89ccf-3ee0-4996-8775-5ac9e5fff069/Assigned\%20Readings/Searle\%20Minds\%2C\%20Brains\%2C\%20and\%20Programs-1.pdf
-
-\bibitem{chinese_room_2}
-https://content.sakai.rutgers.edu/access/content/group/ffe89ccf-3ee0-4996-8775-5ac9e5fff069/Assigned\%20Readings/Chinese\%20Room-1.pdf
-
-\bibitem{intentionality}
-https://content.sakai.rutgers.edu/access/content/group/ffe89ccf-3ee0-4996-8775-5ac9e5fff069/Assigned\%20Readings/Intentionality\%20from\%20MIT\%20Encyclopedia.pdf
-
-\end{thebibliography}
+\printbibliography[title={References}]
 
 \end{document}
