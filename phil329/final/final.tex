@@ -25,12 +25,17 @@ sorting=none
 \author{Joseph A. Boyle}
 \date{December 20, 2017}
 
+
+
+
 \makeatletter
 \pretocmd{\@sect}{\singlespacing}{}{}
 \pretocmd{\@ssect}{\singlespacing}{}{}
 \apptocmd{\@sect}{\doublespacing}{}{}
 \apptocmd{\@ssect}{\doublespacing}{}{}
 \makeatother
+
+
 
 \begin{document}
 
@@ -45,7 +50,7 @@ Since the days of Alan Turing\cite{turing_test}, the question of whether or not 
 	Generally, the complexity of developing a bot increases as we move up the chain -- that is, it's easier to develop a non-mobile bot than a mobile-bot than a reproductive bot -- but that's not always the case.	
 	
 \section{Assessing Faults for Harm Caused by Robots}
-	It is useful to split our discussion into two pieces: robots that have intentionality, and robots that do not. Intentionality, generally, refers to the idea of an entity "[being] about \textit{something}"\cite{intentionality}. That is, an intentional agent has thoughts or beliefs about ideas or actions, rather than just being a mindless entity that does as is without second-guessing what their assignment is, where they are located, or who they are. To some, such as McCarthy, intentionality seems to sometimes to be defined as simply mean having some notion of an internal state of computation -- "a thermostat may usefully be ascribed one of exactly three beliefs—that the room is too cold, that it is too warm or that its temperature is ok"\cite{mccarthy}. Differently, we use intentionality to mean having beliefs about the act of doing a specific \textit{action}, having beliefs about what is going on beyond you in a sense other than that of processing (in effect, not just sensing what is going on around you to some result, but rather gathering information about your surroundings and having an internal thought process of how it makes you feel), and so on. The key feature of intentionality is that it carries with it \textit{feelings}, whereas systems that may have "beliefs" about their current state -- a thermostat believing that it is too hot or cold -- are merely variables in some program, and have no impact on the interior mental states of the entity. 
+	It is useful to split our discussion into two pieces: robots that have intentionality, and robots that do not. Intentionality, generally, refers to the idea of an entity "[being] about \textit{something}"\cite{intentionality}. That is, an intentional agent has thoughts or beliefs about ideas or actions, rather than just being a mindless entity that does as is without second-guessing what their assignment is, where they are located, or who they are. To some, such as McCarthy and Dennett\cite{mccarthy,dennet}, intentionality seems to sometimes simply mean having some notion of an internal state of computation -- "a thermostat may usefully be ascribed one of exactly three beliefs—that the room is too cold, that it is too warm or that its temperature is ok"\cite{mccarthy}. Differently, we use intentionality to mean having beliefs about the act of doing a specific \textit{action}, having beliefs about what is going on beyond you in a sense other than that of processing (in effect, not just sensing what is going on around you to some result, but rather gathering information about your surroundings and having an internal thought process of how it makes you feel), and so on. The key feature of intentionality is that it carries with it \textit{feelings}, whereas systems that may have "beliefs" about their current state -- a thermostat believing that it is too hot or cold -- are merely variables in some program, and have no impact on the interior mental states of the entity. 
 	
 	 To be intentional in this sense necessarily implies consciousness, as having mental states and the ability to examine them implies consciousness, per McCarthy: "a robot will need many forms of self-consciousness, i.e. ability to observe its own mental state."\cite{mccarthy}  
 
@@ -71,7 +76,7 @@ Since the days of Alan Turing\cite{turing_test}, the question of whether or not 
 		For a computer system, being cognizant generally requires the system to know what it is looking at. There are numerous classifiers to detect birds, planes, buildings, and other general objects, but it is incredibly hard for a system to infer what type an object is without having ever been given the association before. This is equivalent to giving a human the task of identifying a species of bird from a picture when they had never before heard of a bird. Wertheim makes a strong point in his article that generally humans run on "zombie mode"\cite{zombie_within}, noticing just enough to get by in our day to day lives on "autopilot"\cite{zombie_within}. Until the fuselage was pointed out, its disappearance wasn't noticeable to most humans. In the meantime, it is reasonable to assume that the human test subject could see all of the parts of the plane and even identify them. Computer systems suffer from the opposite problem -- they can find the differences between two images or scenes, but don't intrinsically know what each of the parts are. Relating back to the problem at hand, a system which can't observe a symbol, for it wasn't shown what to look for, is not its fault, much in the way that we wouldn't blame a human for not noticing something that it had no reasonable way of detecting.
 
 	\subsection{Robots With Intentionality}
-		If a robot has intentionality and thus has beliefs about a system, those beliefs are necessarily shaped by the sense of morality it has adopted, either by itself or from outside programming. 
+		If a robot has intentionality and thus has beliefs about a system, those beliefs are necessarily shaped by the sense of morality it has adopted, either by itself or from outside programming. That is, to carry beliefs is to feel how you do because of some internal view of how the world should work, which can be referred to as morality. On a per-entity basis, morality isn't necessarily just -- a single entity may exhibit schizoid personality disorder, or perhaps take advantage of all whom it encounters -- 
 			
 \section{Abused Robots Causing Harm}	
 	Imagine a combat robot that is developed to only follow orders from a specific individual, resisting what it views as immoral orders. This works well and is able to only do the right thing. If that bot is now "hacked" into and made to ignore its moral compass and instead kill anybody in sight, can we assign blame to the original developer? On a surface glance, this answer seems trivial -- no, it's the hacker's fault. What if we find out that the developer introduced bugs into the source code of the robot which made is susceptible to hacking? Perhaps it's reasonable, then, to conclude that the developer is at fault. Consider, then, that the vulnerability is not from a bug that the developer introduced, but rather from the hacker finding a way to crack the underlying encryption technique that the developer used, which was created by yet another developer? 
