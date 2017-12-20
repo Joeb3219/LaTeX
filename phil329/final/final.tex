@@ -29,18 +29,33 @@
 \maketitle
 
 \section{Introduction}
-Sine the days of Alan Turing\cite{turing_test}, the question of whether or not machines can truly think has troubled even the brightest computer scientists, philosophers, and cognitive scientists. Moreover, the consequences of that question carry heavy consequences which have made the discussion space difficult to prove one way or another. If a robot commits a war crime, does its ability to think and rationally decide to commit that crime leave it liable? If so, does the lack of a real thought process delegate responsibility elsewhere? If the penalty of a crime is death, and the robot isn't ultimately responsible, does its creator gain the death penalty?
+Since the days of Alan Turing\cite{turing_test}, the question of whether or not machines can truly think has troubled even the brightest computer scientists, philosophers, and cognitive scientists. Moreover, the consequences of that question carry heavy consequences which have made the discussion space difficult to prove one way or another. If a robot commits a war crime, does its ability to think and rationally decide to commit that crime leave it liable? If so, does the lack of a real thought process delegate responsibility elsewhere? If the penalty of a crime is death, and the robot isn't ultimately responsible, does its creator gain the death penalty?
 
 \section{Classes of Robots}
 	For the purposes of our discussion, the definition of a "bot" is important. 
 
-	\textit{Non mobile bots} are the types of AI that have been developed for the predominant duration of AI research. These types of bots include chatbots, infobots, weather-predicting bots, and news bots. Typically, non-mobile bots are viewed as computer programs rather than a conventional bot. 
+	\textit{Non mobile bots} are the types of AI that have been developed for the predominant duration of AI research. These types of bots include chatbots, infobots, weather-predicting bots, and news bots. Typically, non-mobile bots are viewed as computer programs rather than a conventional bot. Normally, bots of this type are thought to be harmless, but this class also includes AI which decide what ads to show you, how to delegate power to a city, and whether or not a person is innocent in a trial. 
 	
-	\textit{Mobile Bots} refer to the conventional notion of a "real life" bot that can move around, and generally look like \textit{Sophia}, Data from \textit{Star Trek}, or \textit{Wall-E}. 
+	\textit{Mobile Bots} refer to the conventional notion of a "real life" bot that can move around, and generally look like Hanson Robotics's Sophia, Data from \textit{Star Trek}, or \textit{Wall-E}. 
 	
 	Finally, we use the term \textit{Reproductive bots} to refer to the class of robots which either can directly produce off-spring (either via "birth" or cloning) or can modify their own code or hardware without human assistance
 
-\section{Delegating Blame}
+\section{Robots Without Intentionality}
+	It is useful to split our discussion into two pieces: robots that have intentionality, and robots that do not. Intentionality, generally, refers to the idea of an entity "[being] about \textit{something}"\cite{intentionality}. That is, an intentional agent has thoughts or beliefs about ideas or actions, rather than just being a mindless entity that does as is. Imagine a \textit{non mobile bot} which decides what content to send its users. This bot, however, has been intentionally programmed to have a skew towards sending articles in favor of overthrowing the government. Over time, it influences public opinion and eventually causes havoc in society. Perhaps another bot gives stock advice to investors, and was programmed to intentionally give advice that will bankrupt the investor in favor of bringing wealth to the developer.
+	
+	Pretty clearly, these bots are following a program. Searle argues:
+	
+	\begin{quote}
+		Why does the man in the Chinese room not understand Chinese even though he can pass the Turing test for understanding Chinese? The answer is that he has only the formal syntax of the program and not the actual mental content or semantic content that is associated with the words of a language when a speaker understands that language\cite{chinese_room_1, chinese_room_2}.
+	\end{quote}
+	
+	Thus, the bot is doing the equivalent of a human wearing a blindfold and handing out whatever papers are at the top of the stack of papers. It has no thought process of what papers it hands out -- it just gives one to each passer-by in a rote-manner. If a malicious attacker were to replace all of the papers in the stack with pro-coup pamphlets, and the person handing out the papers continued following its program without any mental state, it's reasonable to conclude that the fault doesn't lie with the person handing out the papers. Similarly, if a robot is just a blind machine following a program as Searle says, we cannot reasonably attribute blame the robot. 
+	
+	Can the same be said about robots which aren't as cut and dry as being developed by a programmer with malicious intent? Take, for instance, the AI that Facebook uses to serve targeted ads to its viewers. In the 2016 Presidential Election, this algorithm has been criticized as disproportionally showing Russian propaganda\cite{facebook_russia} in comparison with valid ads, therein potentially swaying the results of the election. Thus far, we have yet to find that a particular individual or even company has purposely caused this error, but we still seek to place the blame for the malfunction somewhere. Following Searle's point of view.
+	
+	We must truly consider the question of whether or not lacking intentionality is a justifiable reason to not be blamed for a malfunction. Previously, we asserted that an individual handing out destructive papers is okay if they have no way of knowing what they are doing, but I believe that requires a second contingency: that the entity also has no way to correct it. That is, it is only when an entity has no way of understanding what they are doing and also has no mechanism to deviate from that task, that they can be held liable. Given a robot that can't alter its own code or affect future generations of itself via its own free will, it seems clear that robots without intentionality don't fall into this group of agents who could receive blame for crimes.
+
+\section{Robots With Intentionality}
 	
 	To this point, we have considered circumstances in which robots, given choices A and B, incorrectly choose to do A due to either a logical mistake or malicious intent on behalf of the developer. What we have not considered, however, is when robots make mistakes simply due to a lack of information.			
 		
@@ -52,10 +67,10 @@ Sine the days of Alan Turing\cite{turing_test}, the question of whether or not m
 
 	Reproductive Faults
 
-\section{Consequences}
-	In the same way that most doctors would likely not lobby in favour of harsher punishments for mistakes, it is scary as a programmer to recommend programmers be held responsible for the use of their inventions. There are a number of consequences that should be considered with this view, and perhaps even circumstances where we hold programmers to be not responsible for what has happened with their inventions. That is, in the same way that doctors are held responsible for mistakes in a subset of cases, programmers should not be held liable in all situations.
+\section{Abused Robots Causing Harm}	
+	Imagine a combat robot that is developed to only follow orders from a specific individual, resisting what it views as immoral orders. This works well and is able to only do the right thing. If that bot is now "hacked" into and made to ignore its moral compass and instead kill anybody in sight, can we assign blame to the original developer? On a surface glance, this answer seems trivial -- no, it's the hacker's fault. What if we find out that the developer introduced bugs into the source code of the robot which made is susceptible to hacking? Perhaps it's reasonable, then, to conclude that the developer is at fault. Consider, then, that the vulnerability is not from a bug that the developer introduced, but rather from the hacker finding a way to crack the underlying encryption technique that the developer used, which was created by yet another developer? 
 	
-	Hacked robots doing against what we want
+	It is in the nature of software development that behavior is abstracted away and built on top of. If we were to suddenly find an error in one of the lower layers and therein cause a robot built on top of those layers to exhibit errors, can we truly fault the developers of those bottom layers if they never knew that their work would be used in such a manor? 
 	
 	More generally, robots being used not for what we intended.	
 
@@ -70,6 +85,15 @@ https://content.sakai.rutgers.edu/access/content/group/ffe89ccf-3ee0-4996-8775-5
 
 \bibitem{zombie_within}
 https://content.sakai.rutgers.edu/access/content/group/ffe89ccf-3ee0-4996-8775-5ac9e5fff069/Assigned\%20Readings/Koch\%20The\%20Zombie\%20Within.pdf
+
+\bibitem{chinese_room_1}
+https://content.sakai.rutgers.edu/access/content/group/ffe89ccf-3ee0-4996-8775-5ac9e5fff069/Assigned\%20Readings/Searle\%20Minds\%2C\%20Brains\%2C\%20and\%20Programs-1.pdf
+
+\bibitem{chinese_room_2}
+https://content.sakai.rutgers.edu/access/content/group/ffe89ccf-3ee0-4996-8775-5ac9e5fff069/Assigned\%20Readings/Chinese\%20Room-1.pdf
+
+\bibitem{intentionality}
+https://content.sakai.rutgers.edu/access/content/group/ffe89ccf-3ee0-4996-8775-5ac9e5fff069/Assigned\%20Readings/Intentionality\%20from\%20MIT\%20Encyclopedia.pdf
 
 \end{thebibliography}
 
